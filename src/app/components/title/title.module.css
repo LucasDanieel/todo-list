@@ -1,0 +1,24 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title h2 {
+  font-size: 30px;
+}
+
+.iconTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: rgba(1, 154, 34, 0.661);
+  cursor: pointer;
+}
+
+.iconTitle svg {
+  color: white;
+}

@@ -1,0 +1,45 @@
+.todo {
+  display: flex;
+  height: 24px;
+  align-items: center;
+}
+
+.todo input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+.todo span {
+  margin-left: 4px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  font-family: var(--font-geist-sans);
+}
+
+.icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+.icon svg {
+  cursor: pointer;
+}
+
+.wrapperConfirmIcons{
+  display: flex;
+  gap: 4px;
+}
+
+.check {
+  border-radius: 2px;
+  background-color: rgb(1, 154, 34);
+  color: white;
+}
+
+.close {
+  border-radius: 2px;
+  background-color: rgb(194, 4, 4);
+  color: white;
+}
