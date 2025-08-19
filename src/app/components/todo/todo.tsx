@@ -4,7 +4,7 @@ import styles from "./todo.module.css";
 export type TodoProps = {
   todo: TodoItemProps;
   updateTodo: (todo: TodoItemProps, value: boolean) => void;
-  removeTodo: (value: string) => void;
+  removeTodo: (todo: TodoItemProps) => void;
 };
 
 export default function Todo({ todo, updateTodo, removeTodo }: TodoProps) {
@@ -12,7 +12,7 @@ export default function Todo({ todo, updateTodo, removeTodo }: TodoProps) {
     <div className={styles.todo}>
       <input type="checkbox" checked={todo.done} onChange={(e) => updateTodo(todo, e.target.checked)}></input>
       <span>{todo.name}</span>
-      <div className={styles.icon} onClick={() => removeTodo(todo.name)}>
+      <div className={styles.icon} onClick={() => removeTodo(todo)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

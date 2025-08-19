@@ -1,56 +1,17 @@
-.modalAddTodo {
-  position: absolute;
+.newTodo {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  user-select: none;
-  background-color: rgba(0, 0, 0, 0.6);
+  gap: 4px;
+  padding-top: 2px;
 }
 
-.addTodo {
-  border-radius: 16px;
-  padding: 30px;
-  background-color: white;
-}
-
-.addTodo h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.addTodo input {
-  font-size: 16px;
-  margin-bottom: 16px;
+.newTodo input[type="text"] {
   border-width: 0 0 1px 0;
   outline: none;
-}
-
-.modalButtons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.modalButtons button {
-  padding: 5px 10px;
-  border: none;
-  color: white;
   font-size: 16px;
-  font-weight: bold;
-  border-radius: 6px;
+  font-family: var(--font-geist-sans);
+}
+
+.newTodoIcon {
+  color: rgba(1, 154, 34);
   cursor: pointer;
-}
-
-.cancel {
-  background-color: rgb(183, 14, 14);
-}
-.cancel:hover {
-  background-color: rgb(164, 13, 13);
-}
-
-.add {
-  background-color: rgba(1, 154, 34);
 }
