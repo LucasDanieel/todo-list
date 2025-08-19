@@ -24,7 +24,7 @@ export default function Home() {
     const todoList = JSON.parse(todoItens) as TodoItemProps[];
     setTodos(todoList);
 
-    var last = todoList[todoList.length - 1];
+    let last = todoList[todoList.length - 1];
     last_id.current = last.id;
   }, []);
 
@@ -58,7 +58,7 @@ export default function Home() {
     if (list == null) return;
 
     const todoItens = JSON.parse(list) as TodoItemProps[];
-    const newTodoList = todoItens.filter((todoIten, idx) => todoIten.id !== todo.id);
+    const newTodoList = todoItens.filter((todoIten) => todoIten.id !== todo.id);
     localStorage.setItem("todo", JSON.stringify(newTodoList));
     setTodos(newTodoList);
   };
@@ -70,7 +70,7 @@ export default function Home() {
         {todos.map((todo, idx) => (
           <Todo todo={todo} updateTodo={updateTodo} removeTodo={removeTodo} key={idx} />
         ))}
-        {openModal && <ModalAddTodo setOpenModal={setOpenModal} addNewTodo={addNewTodo} />}
+        {openModal && <ModalAddTodo addNewTodo={addNewTodo} />}
       </div>
     </main>
   );

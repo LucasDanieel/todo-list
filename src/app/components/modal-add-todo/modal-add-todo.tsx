@@ -1,12 +1,11 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./modal-add-todo.module.css";
 
 type ModalAddTodoProps = {
-  setOpenModal: Dispatch<SetStateAction<boolean>>;
   addNewTodo: (value: string) => void;
 };
 
-export default function ModalAddTodo({ setOpenModal, addNewTodo }: ModalAddTodoProps) {
+export default function ModalAddTodo({ addNewTodo }: ModalAddTodoProps) {
   const [todoName, setTodoName] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
 
