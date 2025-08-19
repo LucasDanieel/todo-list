@@ -8,7 +8,7 @@ type TitleProps = {
 export default function Title({ setOpenModal }: TitleProps) {
   return (
     <div className={styles.title}>
-      <h2>Todo List</h2>
+      <h2>To do List</h2>
       <div className={styles.iconTitle} onClick={() => setOpenModal(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
