@@ -24,7 +24,7 @@ export default function Home() {
     const todoList = JSON.parse(todoItens) as TodoItemProps[];
     setTodos(todoList);
 
-    let last = todoList[todoList.length - 1];
+    const last = todoList[todoList.length - 1];
     last_id.current = last.id;
   }, []);
 
